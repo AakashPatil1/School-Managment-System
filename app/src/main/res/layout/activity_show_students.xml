@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".student.ShowStudents">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:onClick="arrowback"
+                android:padding="1dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SINDHUTAI SAPKAL SCHOOL"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/edtsearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:inputType="number"-->
+<!--        android:maxLines="1"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/appbar" />-->
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_below="@id/appbar"-->
+<!--        android:text="se"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/btnsearch"/>-->
+
+<!--    <HorizontalScrollView-->
+<!--        android:id="@+id/hd"-->
+<!--        android:layout_marginTop="55dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_1"-->
+<!--                android:text="10"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:padding="6dp"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_2"-->
+<!--                android:text="11"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_3"-->
+<!--                android:text="12"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_4"-->
+<!--                android:text="10"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_5"-->
+<!--                android:text="11"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_6"-->
+<!--                android:text="12"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_7"-->
+<!--                android:text="12"-->
+<!--                android:textSize="12sp"-->
+<!--                android:padding="6dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:layout_margin="6dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+<!--            </Button>-->
+<!--        </LinearLayout>-->
+<!--    </HorizontalScrollView>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="18dp"
+        android:id="@+id/tv"
+        android:layout_below="@id/appbar"
+        android:text="Show Students Details"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv"
+        android:padding="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+
+</RelativeLayout>
