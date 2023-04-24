@@ -1,10 +1,11 @@
-package com.aakash.sss;
+package com.aakash.sss.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.aakash.sss.R;
 import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class SliderAdp extends SliderViewAdapter<SliderAdp.Holder> {

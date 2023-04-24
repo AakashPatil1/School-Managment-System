@@ -1,6 +1,5 @@
-package com.aakash.sss;
+package com.aakash.sss.Activitys;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,18 +7,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.Toast;
 
-import com.aakash.sss.student.AddStudents;
-import com.aakash.sss.teacher.Teacher;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.aakash.sss.Adapter.MainAdapter;
+import com.aakash.sss.R;
+import com.aakash.sss.Adapter.SliderAdp;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -154,7 +149,7 @@ public class HomeAcivity extends AppCompatActivity {
 //    }
 
     public void about(View view) {
-        Intent i = new Intent(getApplicationContext(),Info.class);
+        Intent i = new Intent(getApplicationContext(), Info.class);
         startActivity(i);
     }
 
@@ -168,5 +163,7 @@ protected void onPause() {
     closerDrawer(drawerLayout);
 
 }
+
+
 
 }

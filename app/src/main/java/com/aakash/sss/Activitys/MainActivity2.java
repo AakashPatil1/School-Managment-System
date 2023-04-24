@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -8,13 +8,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.ImageView;
 
-public class TimeTable extends AppCompatActivity {
+import com.aakash.sss.Adapter.ImageAdapter;
+import com.aakash.sss.Adapter.MainAdapter;
+import com.aakash.sss.R;
 
-    ImageView btMenu;
+public class MainActivity2 extends AppCompatActivity {
+
+    GridView GridView;
     DrawerLayout drawerLayout;
     RecyclerView recyclerView;
+    ImageView btMenu;
 
     public static void closerDrawer(DrawerLayout drawerLayout) {
         //Check condition
@@ -25,21 +31,19 @@ public class TimeTable extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_table);
+        setContentView(R.layout.activity_main2);
 
-
-        drawerLayout = findViewById(R.id.drawer_layout);
         btMenu = findViewById(R.id.bt_menu);
+        drawerLayout = findViewById(R.id.drawer_layout);
         recyclerView = findViewById(R.id.recycler_view);
 
         //Set layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //Set adapter
-        recyclerView.setAdapter(new MainAdapter(this,HomeAcivity.arrayList));
+        recyclerView.setAdapter(new MainAdapter(MainActivity2.this,HomeAcivity.arrayList));
 
         btMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +53,10 @@ public class TimeTable extends AppCompatActivity {
             }
         });
 
-
+        GridView = (GridView) findViewById(R.id.gridview);
+        GridView.setAdapter(new ImageAdapter(this));
     }
+
 
     @Override
     protected void onPause() {

@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Models;
 
 public class ListViewPojo {
     private String title;

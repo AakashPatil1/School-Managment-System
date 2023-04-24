@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.aakash.sss.R;
 import com.aakash.sss.database.DBHelper;
 import com.google.android.material.textfield.TextInputEditText;
 

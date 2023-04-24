@@ -14,18 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SSS">
         <activity
-            android:name=".TimeTable"
+            android:name=".Activitys.TimeTable"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Activitys.MainActivity2"
             android:exported="false" />
 
         <activity
-            android:name=".HomeAcivity"
+            android:name=".Activitys.HomeAcivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Info"
+            android:name=".Activitys.Info"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
@@ -49,19 +49,19 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".StudentActivity"
+            android:name=".Activitys.StudentActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Signup"
+            android:name=".Activitys.Signup"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".login"
+            android:name=".Activitys.login"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

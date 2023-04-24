@@ -1,34 +1,35 @@
-package com.aakash.sss;
+package com.aakash.sss.Activitys;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.aakash.sss.teacher.Teacher;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.aakash.sss.Adapter.MainAdapter;
+import com.aakash.sss.R;
+import com.aakash.sss.student.AddStudents;
+import com.aakash.sss.student.DeleteStudents;
+import com.aakash.sss.student.ShowStudents;
+import com.aakash.sss.student.UpdateStudent;
 
-import java.util.ArrayList;
+public class StudentActivity extends AppCompatActivity {
 
-public class Info extends AppCompatActivity {
+    CardView cdadd,cdshow,cddetele,cdupdate,cd11;
+    CardView iv1,iv2,iv3;
 
     AlertDialog.Builder builder;
+
     ImageView btMenu;
     DrawerLayout drawerLayout;
     RecyclerView recyclerView;
-
 
     public static void closerDrawer(DrawerLayout drawerLayout) {
         //Check condition
@@ -39,10 +40,11 @@ public class Info extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.activity_student);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         btMenu = findViewById(R.id.bt_menu);
@@ -61,11 +63,62 @@ public class Info extends AppCompatActivity {
             }
         });
 
-//        //Initialize And Assign Variable
+        builder = new AlertDialog.Builder(this);
+        cdadd = findViewById(R.id.add);
+        cdshow = findViewById(R.id.show);
+        cddetele = findViewById(R.id.delete);
+        cdupdate = findViewById(R.id.update);
+        //cdcard = findViewById(R.id.icard);
+//        cd11 = findViewById(R.id.std11);
+
+//        iv1 = findViewById(R.id.iv1);
+//        iv2 = findViewById(R.id.iv2);
+//        iv3 = findViewById(R.id.iv3);
+
+        cdadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getApplicationContext(), AddStudents.class);
+                startActivity(i);
+            }
+        });
+        cdshow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getApplicationContext(), ShowStudents.class);
+                startActivity(i);
+            }
+        });
+        cddetele.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getApplicationContext(), DeleteStudents.class);
+                startActivity(i);
+            }
+        });
+        cdupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getApplicationContext(), UpdateStudent.class);
+                startActivity(i);
+            }
+        });
+//        cd11.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//            }
+//        });
+        //Initialize And Assign Variable
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 //
 //        //Set Home Selected
-//        bottomNavigationView.setSelectedItemId(R.id.info);
+//        bottomNavigationView.setSelectedItemId(R.id.student);
 //
 //        //Perform ItemSelectedListener
 //        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,62 +126,27 @@ public class Info extends AppCompatActivity {
 //            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 //                switch (item.getItemId()){
 //                    case R.id.student:
-//                        startActivity(new Intent(Info.this, StudentActivity.class));
+////                        startActivity(new Intent(getApplicationContext(),StudentActivity.class));
+////                        overridePendingTransition(0,0);
+//                        return true;
+//                    case R.id.homea:
+//                        startActivity(new Intent(StudentActivity.this, HomeAcivity.class));
 //                        overridePendingTransition(0,0);
 //                        return true;
 //                    case R.id.teacher:
-//                        startActivity(new Intent(Info.this, Teacher.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
-//                    case R.id.homea:
-//                        startActivity(new Intent(Info.this, HomeAcivity.class));
+//                        startActivity(new Intent(StudentActivity.this, Teacher.class));
 //                        overridePendingTransition(0,0);
 //                        return true;
 //                    case R.id.info:
-//                        //Toast.makeText(getApplicationContext(), "Coming Soon" , Toast.LENGTH_SHORT).show();
-////                        startActivity(new Intent(getApplicationContext(), Info.class));
-////                        overridePendingTransition(0,0);
+//                        startActivity(new Intent(StudentActivity.this, Info.class));
+//                        overridePendingTransition(0,0);
 //                        return true;
 //                }
 //                return false;
 //            }
 //        });
-    }
 
-    public void Address(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        Uri data = Uri.parse("https://www.google.com/maps/place/Sindhutai+Sapkal+Orphanage/@18.5203195,73.9759189,17z/data=!3m1!4b1!4m5!3m4!1s0x3bc2c25e6b1fad3d:0x6ca194a7073a583d!8m2!3d18.5203195!4d73.9781077");
-        intent.setData(data);
-        startActivity(Intent.createChooser(intent,"Launch Maps"));
     }
-
-    public void email(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        Uri data = Uri.parse("mailto:?subject=" + "sss@gmail.com");
-        intent.setData(data);
-        startActivity(Intent.createChooser(intent,"Send Mail"));
-    }
-
-    public void call(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:" + "09881337914"));
-        startActivity(intent);
-    }
-
-    public void facbook(View view) {
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/profile.php?id=432854353437101&ref=content_filter"));
-        startActivity(i);
-    }
-
-    public void website(View view) {
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.sindhutaisapkal.org/"));
-        startActivity(i);
-    }
-
-    public void instagram(View view) {
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/dr.sindhutai_sapkal.maai/?igshid=12zx2tx5ws2xw"));
-        startActivity(i);
-    }
-
 //    public void setting(View view) {
 //
 //        //Uncomment the below code to Set the message and title from the strings.xml file
@@ -139,15 +157,20 @@ public class Info extends AppCompatActivity {
 //                .setCancelable(false)
 //                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 //                    public void onClick(DialogInterface dialog, int id) {
-//                        Intent i = new Intent(Info.this, login.class);
+//
+//                        Intent i = new Intent(StudentActivity.this, login.class);
 //                        startActivity(i);
 //                        finish();
+////                        Toast.makeText(getApplicationContext(),"you choose yes action for alertbox",
+////                                Toast.LENGTH_SHORT).show();
 //                    }
 //                })
 //                .setNegativeButton("No", new DialogInterface.OnClickListener() {
 //                    public void onClick(DialogInterface dialog, int id) {
 //                        //  Action for 'NO' Button
 //                        dialog.cancel();
+////                        Toast.makeText(getApplicationContext(),"you choose no action for alertbox",
+////                                Toast.LENGTH_SHORT).show();
 //                    }
 //                });
 //        //Creating dialog box
@@ -155,7 +178,8 @@ public class Info extends AppCompatActivity {
 //        //Setting the title manually
 //        alert.setTitle("Logout");
 //        alert.show();
-//        Intent i = new Intent(Info.this, login.class);
+//        finish();
+//        Intent i = new Intent(StudentActivity.this, login.class);
 //        startActivity(i);
 //        finish();
 //    }
@@ -166,6 +190,7 @@ public class Info extends AppCompatActivity {
 //        counter++;
 //        if(counter == 2){
 //            super.onBackPressed();
+//
 //        }
 //        else{
 //            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();

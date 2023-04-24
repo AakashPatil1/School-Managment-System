@@ -1,4 +1,4 @@
-package com.aakash.sss.teacher;
+package com.aakash.sss.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aakash.sss.Models.Teachers;
 import com.aakash.sss.R;
 
 import java.util.ArrayList;

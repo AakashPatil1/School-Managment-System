@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -7,6 +7,8 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
+
+import com.aakash.sss.R;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;

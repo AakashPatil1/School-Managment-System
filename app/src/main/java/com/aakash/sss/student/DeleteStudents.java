@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.aakash.sss.database.DBHelper;
-import com.aakash.sss.StudentActivity;
+import com.aakash.sss.Activitys.StudentActivity;
 import com.aakash.sss.R;
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -111,4 +111,6 @@ public class DeleteStudents extends AppCompatActivity {
         Intent i = new Intent(this, StudentActivity.class);
         startActivity(i);
     }
+
+
 }

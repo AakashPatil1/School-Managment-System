@@ -1,4 +1,4 @@
-package com.aakash.sss.teacher;
+package com.aakash.sss.Models;
 
 public class Teachers {
 

@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Activitys;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -8,17 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.GridView;
 import android.widget.ImageView;
 
-import com.aakash.sss.teacher.Teacher;
+import com.aakash.sss.Activitys.HomeAcivity;
+import com.aakash.sss.Adapter.MainAdapter;
+import com.aakash.sss.R;
 
-public class MainActivity2 extends AppCompatActivity {
+public class TimeTable extends AppCompatActivity {
 
-    GridView GridView;
+    ImageView btMenu;
     DrawerLayout drawerLayout;
     RecyclerView recyclerView;
-    ImageView btMenu;
 
     public static void closerDrawer(DrawerLayout drawerLayout) {
         //Check condition
@@ -29,19 +29,21 @@ public class MainActivity2 extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_time_table);
 
-        btMenu = findViewById(R.id.bt_menu);
+
         drawerLayout = findViewById(R.id.drawer_layout);
+        btMenu = findViewById(R.id.bt_menu);
         recyclerView = findViewById(R.id.recycler_view);
 
         //Set layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //Set adapter
-        recyclerView.setAdapter(new MainAdapter(MainActivity2.this,HomeAcivity.arrayList));
+        recyclerView.setAdapter(new MainAdapter(this, HomeAcivity.arrayList));
 
         btMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,10 +53,8 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-        GridView = (GridView) findViewById(R.id.gridview);
-        GridView.setAdapter(new ImageAdapter(this));
-    }
 
+    }
 
     @Override
     protected void onPause() {

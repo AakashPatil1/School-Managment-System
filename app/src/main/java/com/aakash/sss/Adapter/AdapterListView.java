@@ -1,4 +1,4 @@
-package com.aakash.sss;
+package com.aakash.sss.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.aakash.sss.Models.ListViewPojo;
+import com.aakash.sss.R;
 
 import java.util.ArrayList;
 

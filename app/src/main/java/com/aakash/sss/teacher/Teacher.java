@@ -1,6 +1,5 @@
 package com.aakash.sss.teacher;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,22 +7,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.aakash.sss.HomeAcivity;
-import com.aakash.sss.MainAdapter;
-import com.aakash.sss.StudentActivity;
+import com.aakash.sss.Activitys.HomeAcivity;
+import com.aakash.sss.Adapter.AdapterRecycler;
+import com.aakash.sss.Adapter.MainAdapter;
+import com.aakash.sss.Models.Teachers;
 import com.aakash.sss.R;
-import com.aakash.sss.Info;
-import com.aakash.sss.login;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 

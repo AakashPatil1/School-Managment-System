@@ -1,8 +1,7 @@
-package com.aakash.sss;
+package com.aakash.sss.Adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.TaskInfo;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -13,6 +12,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aakash.sss.Activitys.HomeAcivity;
+import com.aakash.sss.Activitys.MainActivity2;
+import com.aakash.sss.Activitys.StudentActivity;
+import com.aakash.sss.Activitys.Info;
+import com.aakash.sss.R;
+import com.aakash.sss.Activitys.TimeTable;
 import com.aakash.sss.teacher.Teacher;
 
 import java.util.ArrayList;
@@ -52,17 +57,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                     case 0:
                         //When position is equal to 0
                         //Redirect to home page
-                        activity.startActivity(new Intent(activity,HomeAcivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        activity.startActivity(new Intent(activity, HomeAcivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         break;
                     case 1:
                         //When position is equal to 1
                         //Redirect to dashboard page
-                        activity.startActivity(new Intent(activity,Info.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        activity.startActivity(new Intent(activity, Info.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         break;
                     case 2:
                         //When position is equal to 2
                         //Redirect to about page
-                        activity.startActivity(new Intent(activity,StudentActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        activity.startActivity(new Intent(activity, StudentActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         break;
                     case 3:
                         //When position is equal to 3
@@ -77,7 +82,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                     case 5:
                         //When position is equal to 5
                         //Redirect to about page
-                        activity.startActivity(new Intent(activity,MainActivity2.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                        activity.startActivity(new Intent(activity, MainActivity2.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         break;
                     case 6:
                         //When position is equal to 6

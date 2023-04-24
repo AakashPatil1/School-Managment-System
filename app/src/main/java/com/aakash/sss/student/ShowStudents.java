@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.aakash.sss.database.DBHelper;
-import com.aakash.sss.StudentActivity;
-import com.aakash.sss.MyAdapter;
+import com.aakash.sss.Activitys.StudentActivity;
+import com.aakash.sss.Adapter.MyAdapter;
 import com.aakash.sss.R;
 
 import java.util.ArrayList;
@@ -209,5 +209,7 @@ public class ShowStudents extends AppCompatActivity  { // implements View.OnClic
         Intent i = new Intent(this, StudentActivity.class);
         startActivity(i);
     }
+
+
 
 }
